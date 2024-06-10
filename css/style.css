@@ -1,0 +1,386 @@
+* {
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+body {
+  text-align:left;
+  font-size: 16px;
+  color: #333;
+  background: #fff;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: .05rem;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.input_text_box {
+  display: flex;
+  align-items: flex-start;
+}
+@media(max-width: 768px){
+  .input_text_box {
+  width: 100%;
+  }
+}
+.error {
+  color: #4260a1;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.header {
+  width: 100%;
+  padding: 0;
+  background: #E3F2FD;
+  color: #fff;
+  position: relative;
+}
+.header .h1 {
+  font-size: 1.8rem;
+  margin-top: .8rem;
+  color: #4260a1;
+}
+.header button[type="submit"]{
+  margin: 0 auto;
+  padding: 0.2rem 0.25rem;
+  display: inline-block;
+  color: #4260a1;
+  font-size: 1rem;
+  position: absolute;
+  right: .5rem;
+  top: 12%;
+}
+.header button[type="submit"]:hover {
+  opacity: .7;
+}
+.header .container {
+  position: relative;
+  background: #E3F2FD;
+  /* max-width: 100%; */
+  /* margin: 0 10rem; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items:flex-start;
+  height: 5.625rem;
+}
+.header #header_search {
+  position: relative;
+}
+.header .input_text {
+  padding: .4rem 1rem;
+  border-radius: 5rem;
+  border: 1px solid #4260a1;
+  background-color: #fff;
+  width: 100%;
+  position: relative;
+}
+.header .unav {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 1rem;
+}
+.header .unav .unav_item {
+  width: 2rem;
+  height: 2rem;
+  margin: 0 .2rem;
+}
+.header .unav .unav_item i {
+  font-size: 1.5rem;
+  color: #4260a1;
+}
+.sub_unav_item {
+  display: none;
+  width: 10rem;
+  flex-direction: column;
+}
+.unav_item.prof {
+  position: relative;
+}
+.unav_item.prof:hover {
+  cursor: pointer;
+}
+.unav_item.prof:hover .sub_unav_item {
+  display: flex;
+}
+.sub_unav_item .sub_unav_item {
+  font-size: 1rem;
+  padding: .3rem;
+  background-color: #d0dae0;
+  z-index: 10;
+  color: #333;
+}
+.header .left_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: .8rem;
+}
+.wave {
+  position: absolute;
+  height: 33px;
+  width: 100%;
+  background: #E3F2FD;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.wave::before, .wave::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 50% 100%;
+}
+
+.wave::before {
+  width: 55%;
+  height: 100%;
+  background-color: #E3F2FD;
+  right: -1.5%;
+  top: 40%;
+}
+.wave::after {
+  width: 55%;
+  height: 109%;
+  background-color: #fafafa;
+  left: -1.5%;
+  top: 60%;
+}
+.loop_books {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100%;
+  margin: 0 auto;
+  gap: 3rem 2%;
+}
+.loop_books .detail_box {
+  width: 12%;
+}
+.loop_books .loop_books_item {
+  /* width: 8.333%; */
+  width: 100%;
+}
+.loop_books .loop_books_item img {
+  margin: 0 auto;
+}
+.book_item_title {
+  font-weight: bold;
+}
+.main {
+  /* height: 100vh; */
+  background: #fafafa;
+  flex: 1;
+}
+.main .container {
+  margin: 0 auto 0;
+  padding: 5rem 0 5rem;
+  /* max-width: 62.5rem; */
+}
+.main .h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 1.5rem;
+  color: #4260a1;
+}
+.main .login_form {
+  background-color: rgba(255, 255, 255, .8);
+  padding: 3rem 2rem 3rem;
+  box-shadow: 0px 0px 10px -5px #e5e8f1;
+  border-radius: 6px;
+  border: 1px solid #e5e8f1;
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+@media(max-width:768px) {
+  .main {
+    margin: 2rem 1rem;
+    padding: 5rem 2.5rem;
+  }
+}
+.main .mb2 {
+  margin-bottom: 2.8rem;
+}
+.main .w25 {
+  width: 25rem;
+  display: inline-block;
+}
+.main .input_text {
+  padding: .5rem 1rem;
+  margin-bottom: .8rem;
+  border-radius: 0rem;
+  border: 1px solid #d0dae0;
+  background-color: #fff;
+  width: 290px;
+}
+.main .input_text.short_box {
+  width: 8rem;
+}
+@media(max-width:768px) {
+  .main .w25 {
+    width: 100%;
+    display: inline-block;
+}
+  .main .input_text {
+    margin: 1rem auto;
+    padding: .5rem 1rem;
+    width: 100%;
+}
+}
+/* .main .input_text:nth-child(2) {
+  margin-bottom: 0rem;
+} */
+.main .input_text:focus {
+  border: 2px solid #18244d; /* フォーカス時の枠の色 */
+  outline: none; /* デフォルトのフォーカス枠を消す */
+}
+.main .input_text_lbl {
+  width: 6rem;
+  display: inline-block;
+  margin-right: 1rem;
+  margin-top: .3rem;
+  margin-bottom: .5rem;
+}
+.login_box .label{
+  margin-right: 1rem;
+  width: 7rem;
+  display: block;
+  white-space: nowrap;
+}
+.login_box .input_text{
+  margin-right: 1rem;
+}
+.login_box .input_text.text_memo {
+  width: calc(100% - 8rem);
+}
+.login_form button[type="submit"]{
+  margin: 2rem auto 1rem;
+  padding: 1.2rem 0;
+  width: 75%;
+  color: white;
+  background-color: #4260a1;
+  border-radius: 15rem;
+  display: block;
+}
+.login_form button[type="submit"]:hover {
+  opacity: .7;
+}
+.login_form .signup_btn {
+  margin: 1rem auto 1rem;
+  padding: 1.2rem 0;
+  width: 75%;
+  color: white;
+  background-color: #ffa000;
+  border-radius: 15rem;
+  display: block;
+}
+.login_form .signup_btn:hover {
+  opacity: .7;
+}
+.main .booklist_form {
+  background-color: rgba(255, 255, 255, .8);
+  padding: 3rem 2rem 5rem;
+  box-shadow: 0px 0px 10px -5px #e5e8f1;
+  border-radius: 6px;
+  border: 1px solid #e5e8f1;
+  width: 980px;
+  margin: 0 auto;
+  text-align: center;
+}
+.main .detail_box {
+  display: flex;
+  justify-content: center;
+  gap: 0 4rem;
+}
+.main .detail_box .detail_left {
+  text-align: left;
+  width: 220px;
+}
+.bookitem_title {
+  font-size: 2rem;
+}
+.bookitem_title span {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+.main .detail_box .detail_left img {
+  width: 220px;
+  height: auto;
+}
+.main .detail_box .detail_right {
+  width: 39.1rem;
+  text-align: left;
+}
+.book_btn {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+  gap: 0 2rem;
+}
+.book_btn .book_btn_item {
+  width: 45%;
+  text-align: center;
+}
+.book_btn .book_btn_item button[type='submit'] {
+  height: 3rem;
+  line-height: 3rem;
+  color: #fff;
+  background-color: #4260a1;
+  display: inline-block;
+  width: 100%;
+}
+.book_btn .book_btn_item a {
+  height: 3rem;
+  line-height: 3rem;
+  color: #fff;
+  background-color: #4260a1;
+  display: inline-block;
+  width: 100%;
+}
+.book_item_description {
+  margin-top: 2rem;
+}
+.footer {
+  position: relative;
+  bottom: 0;
+  height: 50px;
+}
+.footer .wave {
+  position: absolute;
+  height: 33px;
+  width: 100%;
+  background: #E3F2FD;
+  bottom: 0;
+  overflow-x: hidden;
+  overflow: visible;
+}
+
+.footer .wave::before, .footer .wave::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 50% 100%;
+}
+
+.footer .wave::before {
+  width: 53%;
+  height: 100%;
+  background-color: #fafafa;
+  right: -1.5%;
+  top: -64%;
+}
+.footer .wave::after {
+  width: 55%;
+  height: 109%;
+  background-color: #E3F2FD;
+  left: -1.5%;
+  top: -60%;
+}
