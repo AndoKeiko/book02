@@ -31,7 +31,7 @@ $row_count = $stmt->rowCount(); ?>
       $stmt = $pdo->prepare($sql);
       $stmt->bindValue(':email', $email, PDO::PARAM_STR);
       $stmt->execute();    
-      echo "<a href='./login.php'>ログイン画面</a>";
+      echo "<br><a href='./login.php' class='signup_btn'>ログイン画面</a>";
 
       $url = "https://gajumaro.sakura.ne.jp/kadai3/login.php";
       $message = "本登録が出来ました。ありがとうございました。";
@@ -66,7 +66,7 @@ $row_count = $stmt->rowCount(); ?>
     } else if ($row_count == 0) {
       $errors['urltoken_timeover'] = "このURLはご利用できません。<br>有効期限が過ぎたかURLが間違えている可能性がございます。<br>もう一度登録をやりなおして下さい。";
       echo "<p>このURLはご利用できません。有効期限が過ぎたかURLが間違えている可能性がございます。もう一度登録をやりなおして下さい。</p>";
-      echo "<p><a href='./user.php' class='signup_btn'>ユーザー登録画面へ</a></p>";
+      echo "<br><p><a href='./user.php' class='signup_btn'>ユーザー登録画面へ</a></p>";
     } ?>
 
 <?php include 'footer.php'; ?>

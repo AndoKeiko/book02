@@ -2,12 +2,16 @@
 ini_set( 'display_errors', 1 );
 session_start();
 
+
+include("funcs.php");
 //POST値
 $lid = $_POST["lid"];
 $lpw = $_POST["lpw"];
-
+if($lid == "" || $lpw == ""){
+  $_SESSION['error'] = "IDとパスワードを入れてください";
+  redirect("login.php");
+}
 //1.  DB接続します
-include("funcs.php");
 $pdo = db_conn();
 
 //2. データ登録SQL作成
